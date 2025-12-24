@@ -2,13 +2,12 @@ name: Deploy Preview on Feature PR
 
 on:
   pull_request:
-    branches:
-      - feature/** # 👈 triggers when PR is opened from feature/*
 
 jobs:
   deploy:
+    if: startsWith(github.head_ref, 'feature/')
     name: Deploy Preview
-    environment: preview # 👈 uses EAS Preview environment
+    environment: preview
     type: deploy
     params:
-      preview: true # 👈 marks this as a preview deployment
+      preview: true
