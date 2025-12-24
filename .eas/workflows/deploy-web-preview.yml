@@ -1,21 +1,14 @@
 name: Feature Preview Build
 on:
-  pull_request:
+  push:
     branches:
       - feature/**
-    types:
-      - opened
-      - reopened
-      - synchronize
 
 jobs:
-  build:
-    # You can use a pre-packaged job provided by Expo (e.g., 'build')
-    # or define custom steps here.
-    # For a typical PR preview, you might use 'fingerprint' and 'update' jobs.
-    # The example below uses a custom job with a simple script.
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run a script on PR
-        run: echo "EAS Workflow triggered by a PR on a feature branch!"
+  deploy:
+    if: startsWith(github.head_ref, 'feature/')
+    name: Deploy Preview
+    environment: preview
+    type: deploy
+    params:
+      preview: true
