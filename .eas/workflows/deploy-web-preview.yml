@@ -6,7 +6,6 @@ on:
 
 jobs:
   deploy:
-    if: startsWith(github.head_ref, 'feature/')
     name: Deploy Preview
     environment: preview
     type: deploy
