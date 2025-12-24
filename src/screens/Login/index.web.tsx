@@ -243,7 +243,7 @@ export default function LoginScreenWeb() {
     onSuccess: () =>
       setNotice({
         type: "success",
-        message: "Logged in (stub). Wire this to your auth API next.",
+        message: "Logged in (stub). Wire this to your auth API next please.",
       }),
     onError: (error) =>
       setNotice({
