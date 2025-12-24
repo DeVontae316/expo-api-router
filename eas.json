@@ -1,0 +1,33 @@
+{
+  "cli": {
+    "version": ">= 12.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "EXPO_DEBUG": "true",
+        "EXPO_ROUTER_APP_ROOT": "src/app"
+      }
+    },
+    "preview": {
+      "channel": "staging",
+      "env": {
+        "EAS_ENVIRONMENT": "preview",
+        "EXPO_ROUTER_APP_ROOT": "src/app"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "env": {
+        "EAS_ENVIRONMENT": "production",
+        "EXPO_ROUTER_APP_ROOT": "src/app"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
+
