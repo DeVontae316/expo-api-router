@@ -1,9 +1,6 @@
 name: Feature Preview Build
 on:
-  push:
-    branches:
-      - !main
-      - *
+  push: branches:[!'main', *]
 
 jobs:
   deploy:
