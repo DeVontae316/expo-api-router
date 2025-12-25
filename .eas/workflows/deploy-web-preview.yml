@@ -2,7 +2,8 @@ name: Feature Preview Build
 on:
   push:
     branches:
-      - !main
+      - "*" # match all branches
+      - "!main" # except main
 
 jobs:
   deploy:
