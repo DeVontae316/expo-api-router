@@ -1,0 +1,14 @@
+name: Production Deploy
+
+on:
+  push:
+    branches:
+      - main # only runs on main pushes
+
+jobs:
+  deploy:
+    name: Deploy Production
+    environment: production # 👈 prod env in EAS
+    type: deploy
+    params:
+      prod: true # 👈 NOT a preview deployment
