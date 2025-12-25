@@ -1,7 +1,6 @@
-import "../utils/unistyles";
-
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
+import "../utils/unistyles";
 
 const queryClient = new QueryClient({
   defaultOptions: {
