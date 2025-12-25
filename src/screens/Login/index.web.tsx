@@ -213,7 +213,7 @@ export default function LoginScreenWeb() {
     const password = credentials.password.trim();
 
     if (!email && !password)
-      throw new Error("Email and password are required!!!");
+      throw new Error("Email and password are required!!!!");
     if (!email) throw new Error("Email is required.");
     if (!password) throw new Error("Password is required.");
 
@@ -243,7 +243,7 @@ export default function LoginScreenWeb() {
     onSuccess: () =>
       setNotice({
         type: "success",
-        message: "Logged in (stub). Wire this to your auth API next.",
+        message: "Logged in (stub). Wire this to your auth API next please.",
       }),
     onError: (error) =>
       setNotice({
