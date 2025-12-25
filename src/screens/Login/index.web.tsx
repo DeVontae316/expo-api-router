@@ -417,7 +417,7 @@ export default function LoginScreenWeb() {
 
             <View style={styles.footer}>
               <Text style={styles.footerText}>
-                Secure platform for educational leaders
+                Secure platform for superintendent research and insights
               </Text>
               <View style={styles.footerRow}>
                 <View style={styles.badge}>

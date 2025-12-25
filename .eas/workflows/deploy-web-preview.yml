@@ -11,4 +11,4 @@ jobs:
     environment: preview
     type: deploy
     params:
-      preview: true
+      prod: false
