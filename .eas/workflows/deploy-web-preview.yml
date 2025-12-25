@@ -1,6 +1,9 @@
 name: Feature Preview Build
 on:
-  push: branches:[!'main', *]
+  push:
+    branches:
+      - "*" # match all branches
+      - "!main" # except main
 
 jobs:
   deploy:
