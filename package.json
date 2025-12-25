@@ -21,8 +21,8 @@
     "build:prod:web": "eas build --profile production --platform web",
     "build:preview:web": "eas build --profile preview --platform web",
     "build:dev:web": "eas build --profile development --platform web",
-    "db:push": "DOTENV_CONFIG_PATH=.env.local drizzle-kit push",
-    "db:generate": "DOTENV_CONFIG_PATH=.env.local drizzle-kit generate"
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
