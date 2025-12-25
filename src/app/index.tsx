@@ -1,4 +1,3 @@
-import HomeScreen from '../screens/Home';
+import LoginScreenWeb from "@/screens/Login/index.web";
 
-export default HomeScreen;
-
+export default LoginScreenWeb;
