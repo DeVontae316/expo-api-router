@@ -1,6 +1,6 @@
 name: Feature Preview Build
 on:
-  pull_request:
+  push:
     branches:
       - "*" # match all branches
       - "!main" # except main
