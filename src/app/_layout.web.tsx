@@ -1,7 +1,7 @@
-import '../utils/unistyles';
+import "../utils/unistyles";
 
-import { Stack } from 'expo-router';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Stack } from "expo-router";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -17,9 +17,8 @@ export default function RootLayoutWeb() {
     <QueryClientProvider client={queryClient}>
       <Stack initialRouteName="login">
         <Stack.Screen name="login" options={{ headerShown: false }} />
-        <Stack.Screen name="index" options={{ title: 'Home' }} />
-        <Stack.Screen name="events" options={{ title: 'Events' }} />
-        <Stack.Screen name="settings" options={{ title: 'Settings' }} />
+        <Stack.Screen name="events" options={{ title: "Events" }} />
+        <Stack.Screen name="settings" options={{ title: "Settings" }} />
       </Stack>
     </QueryClientProvider>
   );
