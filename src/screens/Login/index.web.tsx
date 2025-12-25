@@ -8,7 +8,6 @@ import {
   Text,
   TextInput,
   View,
-  useWindowDimensions,
 } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
@@ -23,18 +22,19 @@ const styles = StyleSheet.create((theme) => ({
   card: {
     width: 1120,
     maxWidth: "100%",
-    minHeight: 680,
     borderRadius: theme.radius.lg,
     overflow: "hidden",
     backgroundColor: "#fff",
     flexDirection: "row",
+    flexWrap: "wrap",
     _web: {
       boxShadow: "0 18px 60px rgba(0,0,0,0.45)",
     },
   },
   left: {
     flex: 1,
-    padding: 64,
+    minWidth: 360,
+    padding: 48,
     justifyContent: "center",
     backgroundColor: theme.colors.brand,
     _web: {
@@ -76,7 +76,8 @@ const styles = StyleSheet.create((theme) => ({
   },
   right: {
     flex: 1,
-    padding: 72,
+    minWidth: 360,
+    padding: 48,
     justifyContent: "center",
   },
   form: {
@@ -193,9 +194,6 @@ const styles = StyleSheet.create((theme) => ({
 }));
 
 export default function LoginScreenWeb() {
-  const { width } = useWindowDimensions();
-  const isNarrow = width < 980;
-
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
@@ -293,16 +291,8 @@ export default function LoginScreenWeb() {
 
   return (
     <View style={styles.page}>
-      <View
-        style={[
-          styles.card,
-          {
-            flexDirection: isNarrow ? "column" : "row",
-            minHeight: isNarrow ? 760 : 680,
-          },
-        ]}
-      >
-        <View style={[styles.left, { padding: isNarrow ? 44 : 64 }]}>
+      <View style={styles.card}>
+        <View style={styles.left}>
           <View style={styles.leftInner}>
             <View style={styles.logoWrap}>
               <Image
@@ -318,7 +308,7 @@ export default function LoginScreenWeb() {
           </View>
         </View>
 
-        <View style={[styles.right, { padding: isNarrow ? 44 : 72 }]}>
+        <View style={styles.right}>
           <View style={styles.form}>
             {!!notice && (
               <View
