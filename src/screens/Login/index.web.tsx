@@ -226,7 +226,7 @@ export default function LoginScreenWeb() {
       password.length < options.minPasswordLength
     ) {
       throw new Error(
-        `Password must be at least ${options.minPasswordLength} characters.`
+        `Password must be at least ${options.minPasswordLength} characters!`
       );
     }
 
