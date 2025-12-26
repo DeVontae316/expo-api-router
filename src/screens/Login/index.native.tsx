@@ -400,7 +400,7 @@ export default function LoginScreenIOS() {
               ]}
             >
               <Text style={styles.secondaryButtonText}>
-                {signUp.isPending ? "Signing up…" : "Sign up"}
+                {signUp.isPending ? "Signing up" : "Sign up"}
               </Text>
             </Pressable>
 
