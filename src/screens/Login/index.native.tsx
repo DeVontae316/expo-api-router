@@ -207,7 +207,10 @@ export default function LoginScreenIOS() {
   useEffect(() => {
     const apiOrigin = Constants.expoConfig?.extra?.apiOrigin;
     console.log("🔍 DEBUG - API Origin from config:", apiOrigin);
-    console.log("🔍 DEBUG - Full extra config:", Constants.expoConfig?.extra);
+    console.log(
+      "🔍 DEBUG - Full extra config:",
+      Constants.expoConfig?.extra?.router.origin
+    );
   }, []);
 
   const getValidatedCredentials = (options?: {
@@ -424,7 +427,9 @@ export default function LoginScreenIOS() {
             <View style={styles.footer}>
               <Text style={styles.footerText}>
                 Secure platform for superintendent research and insights
-                {`api orgin:${Constants.expoConfig?.extra?.apiOrigin ?? "N/A"}`}
+                {`api orgin:${
+                  Constants.expoConfig?.extra?.router.origin ?? "N/A"
+                }`}
               </Text>
               <View style={styles.footerRow}>
                 <View style={styles.badge}>
