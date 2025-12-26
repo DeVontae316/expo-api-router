@@ -406,7 +406,7 @@ export default function LoginScreenIOS() {
 
             <Pressable
               onPress={() =>
-                Alert.alert("Need Help", "Add password reset/help next.")
+                Alert.alert("Need Help!!!", "Add password reset/help next.")
               }
               style={styles.link}
             >
