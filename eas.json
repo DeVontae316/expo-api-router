@@ -1,33 +1,31 @@
 {
-  "cli": {
-    "version": ">= 12.0.0"
-  },
   "build": {
     "development": {
       "developmentClient": true,
       "distribution": "internal",
       "env": {
-        "EXPO_DEBUG": "true",
-        "EXPO_ROUTER_APP_ROOT": "src/app"
+        "environment": "development"
+      }
+    },
+    "development-simulator": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "environment": "development"
+      },
+      "ios": {
+        "simulator": true
       }
     },
     "preview": {
-      "channel": "staging",
       "env": {
-        "EAS_ENVIRONMENT": "preview",
-        "EXPO_ROUTER_APP_ROOT": "src/app"
+        "environment": "preview"
       }
     },
     "production": {
-      "channel": "production",
       "env": {
-        "EAS_ENVIRONMENT": "production",
-        "EXPO_ROUTER_APP_ROOT": "src/app"
+        "environment": "production"
       }
     }
-  },
-  "submit": {
-    "production": {}
   }
 }
-
