@@ -54,6 +54,7 @@ module.exports = ({ config }) => {
         eas: {
           projectId: "d8c79c18-7235-46e2-b50b-7eb21c0e70c3",
         },
+        apiOrigin,
       },
       owner: "codewithtae",
     },

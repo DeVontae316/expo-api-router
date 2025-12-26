@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useMutation } from "@tanstack/react-query";
-import { useState } from "react";
+import Constants from "expo-constants";
+import { useEffect, useState } from "react";
 import {
   Alert,
   Image,
@@ -201,6 +202,13 @@ export default function LoginScreenIOS() {
     type: "error" | "success";
     message: string;
   } | null>(null);
+
+  // Debug: Log the API origin from config
+  useEffect(() => {
+    const apiOrigin = Constants.expoConfig?.extra?.apiOrigin;
+    console.log("🔍 DEBUG - API Origin from config:", apiOrigin);
+    console.log("🔍 DEBUG - Full extra config:", Constants.expoConfig?.extra);
+  }, []);
 
   const getValidatedCredentials = (options?: {
     requireValidEmail?: boolean;
@@ -416,6 +424,7 @@ export default function LoginScreenIOS() {
             <View style={styles.footer}>
               <Text style={styles.footerText}>
                 Secure platform for superintendent research and insights
+                {`api orgin:${Constants.expoConfig?.extra?.apiOrigin ?? "N/A"}`}
               </Text>
               <View style={styles.footerRow}>
                 <View style={styles.badge}>
