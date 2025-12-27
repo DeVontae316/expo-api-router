@@ -7,7 +7,6 @@ on:
 jobs:
   publish_preview_update:
     name: Publish preview update
-    environment: preview
     type: update
     params:
       platform: all
