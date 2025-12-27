@@ -2,7 +2,7 @@ module.exports = ({ config }) => {
   // Determine the API origin based on environment
   const env = process.env.APP_VARIANT ?? "I am a default value";
   const apiOrigin =
-    env === "preview" || env === "production"
+    env === "preview" || env === "production" || env === "I am a default value"
       ? "https://codewithtae-expo-api-route.expo.app"
       : "http://localhost:8082";
 
