@@ -1,9 +1,10 @@
 module.exports = ({ config }) => {
   // Determine the API origin based on environment
-  let apiOrigin =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:8082"
-      : "codewithtae-expo-api-route.expo.app";
+  const env = process.env.APP_VARIANT ?? "I am a default value";
+  const apiOrigin =
+    env === "preview" || env === "production"
+      ? "https://codewithtae-expo-api-route.expo.app"
+      : "http://localhost:8082";
 
   return {
     expo: {
@@ -55,6 +56,7 @@ module.exports = ({ config }) => {
           projectId: "d8c79c18-7235-46e2-b50b-7eb21c0e70c3",
         },
         apiOrigin,
+        env,
       },
       owner: "codewithtae",
     },
