@@ -18,6 +18,8 @@
       }
     },
     "preview": {
+      "channel": "preview",
+      "distribution": "internal",
       "env": {
         "environment": "preview"
       }
