@@ -2,7 +2,7 @@ name: Feature Preview Build
 on:
   push:
     branches:
-      - "*" # match all branches
+      - "feature-web/*" # match all branches
       - "!main" # except main
 
 jobs:
