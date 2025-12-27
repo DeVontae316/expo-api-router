@@ -8,6 +8,9 @@ jobs:
   publish_preview_update:
     name: Publish preview update
     environment: preview
+    env:
+      APP_VARIANT: preview
+      NEON_DB_URL: ${{ env.NEON_DB_URL }}
     type: update
     params:
-      platform: android
+      platform: android | ios
