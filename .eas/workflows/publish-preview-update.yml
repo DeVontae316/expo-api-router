@@ -10,4 +10,4 @@ jobs:
     environment: preview
     type: update
     params:
-      branch: ${{ github.ref_name || 'test' }}
+      platform: android
