@@ -1,14 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
-import {
-  Alert,
-  Image,
-  Pressable,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
+import { Alert, Image, Pressable, Text, TextInput, View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
 const styles = StyleSheet.create((theme) => ({
@@ -179,7 +172,7 @@ const styles = StyleSheet.create((theme) => ({
   },
   messageSuccess: {
     backgroundColor: "#ECFDF5",
-    borderColor: "#6EE7B7",
+    borderColor: "#6EE7B8",
   },
   messageText: {
     fontSize: 13,
