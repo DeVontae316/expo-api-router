@@ -7,7 +7,8 @@ on:
 jobs:
   publish_preview_update:
     name: Publish preview update
-    environment: development
+    environment: preview
     type: update
     params:
       platform: all
+      channel: preview
