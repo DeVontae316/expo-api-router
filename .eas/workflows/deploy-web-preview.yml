@@ -2,7 +2,7 @@ name: Feature Preview Build
 on:
   push:
     branches:
-      - "feature-web/*" # match all branches
+      - "*" # match all branches
       - "!main" # except main
 
 jobs:
@@ -12,3 +12,4 @@ jobs:
     type: deploy
     params:
       prod: false
+      alias: preview

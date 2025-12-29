@@ -1,10 +1,12 @@
 module.exports = ({ config }) => {
   // Determine the API origin based on environment
-  const env = process.env.APP_VARIANT ?? "I am a default value";
-  const apiOrigin =
-    env === "preview" || env === "production" || env === "I am a default value"
-      ? "https://codewithtae-expo-api-route.expo.app"
-      : "http://localhost:8082";
+  const env = process.env.APP_VARIANT;
+
+  const apiOrigin = {
+    development: "http://localhost:8082",
+    preview: "https://codewithtae-expo-api-route--staging.expo.app/",
+    production: "https://codewithtae-expo-api-route.expo.app/",
+  };
 
   return {
     expo: {
@@ -39,7 +41,7 @@ module.exports = ({ config }) => {
         output: "server",
         favicon: "./assets/images/favicon.png",
       },
-      plugins: [["expo-router", { origin: apiOrigin }]],
+      plugins: [["expo-router", { origin: apiOrigin[env] }]],
 
       updates: {
         url: "https://u.expo.dev/d8c79c18-7235-46e2-b50b-7eb21c0e70c3",
